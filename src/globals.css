@@ -1,1 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 @import "tailwindcss";
+
+body {
+  font-family: "Arial", sans-serif; /* Use a clean font */
+  background-color: #f7fafc; /* Light background for contrast */
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif; /* Apply Montserrat font */
+  color: #2d3748; /* Darker text for headings */
+}
+
+button {
+  transition: background-color 0.3s ease; /* Smooth transition for buttons */
+}
+
+textarea {
+  border: 1px solid #cbd5e0; /* Light border for text area */
+}
+
+textarea:focus {
+  border-color: #63b3ed; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
