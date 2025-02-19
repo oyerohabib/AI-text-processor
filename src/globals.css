@@ -23,3 +23,7 @@ textarea:focus {
   border-color: #63b3ed; /* Highlight border on focus */
   outline: none; /* Remove default outline */
 }
+
+footer {
+  z-index: 1000; /* Ensure the footer is above other content */
+}
