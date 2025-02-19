@@ -53,6 +53,30 @@ To get started with the AI Text Processor, follow these steps:
 3. **Translate**: Select the target language from the dropdown and click "Translate" to get the translated text.
 4. **Summarize**: If the output text is lengthy, you can choose the summarization options and click "Summarize" to get a concise version.
 
+## Screenshots
+
+|                                                   |                                                   |
+| :-----------------------------------------------: | :-----------------------------------------------: |
+| ![Screenshot 6](https://i.imgur.com/vzbWUsM.jpeg) | ![Screenshot 5](https://i.imgur.com/FOpv4Um.jpeg) |
+| ![Screenshot 3](https://i.imgur.com/MgTJNtU.jpeg) | ![Screenshot 4](https://i.imgur.com/V6vezSJ.jpeg) |
+
+## Compatibility Issues
+
+- The application is designed to work on Chrome version 131 to Chrome 136.
+- Some features may not be fully supported on older versions of browsers or on mobile devices.
+
+## Supported Devices
+
+- Desktop: Windows, macOS, and Linux
+- Mobile: Android and iOS (may have limited functionality)
+
+## Resources
+
+- **Chrome AI APIs Overview**: [Chrome AI APIs Overview](https://developer.chrome.com/docs/ai/)
+- **Summarizer API Documentation**: [Summarizer API Documentation](https://developer.chrome.com/docs/ai/summarizer-api)
+- **Translator API Documentation**: [Translator API Documentation](https://developer.chrome.com/docs/ai/translator-api)
+- **Language Detection API Documentation**: [Language Detection API Documentation](https://developer.chrome.com/docs/ai/language-detection)
+
 ## Components
 
 - **TextProcessor**: The main component that handles user input, output display, and integrates language detection, translation, and summarization functionalities.
