@@ -1,50 +1,100 @@
-# React + TypeScript + Vite
+# AI Text Processor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The AI Text Processor is a web application designed to facilitate language detection, translation, and summarization of text. Built with React and Tailwind CSS, this application leverages AI capabilities to provide users with a seamless experience in processing text across multiple languages.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Language Detection**: Automatically detects the language of the input text.
+- **Translation**: Translates text between various languages using an AI-powered translator.
+- **Summarization**: Summarizes long texts into concise formats, allowing users to grasp key points quickly.
+- **User-Friendly Interface**: A clean and responsive UI built with Tailwind CSS for an optimal user experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+- **React Toastify**: For displaying notifications and alerts.
+- **Vite**: A build tool that provides a fast development environment.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+To get started with the AI Text Processor, follow these steps:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clone the Repository**:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   ```bash
+   git clone https://github.com/yourusername/ai-text-processor.git
+   cd ai-text-processor
+   ```
+
+2. **Install Dependencies**:
+   Make sure you have Node.js installed. Then run:
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the Development Server**:
+   Start the application in development mode:
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in Browser**:
+   Navigate to `http://localhost:5173` in your web browser to view the application.
+
+## Usage
+
+1. **Input Text**: Type or paste the text you want to process in the input area.
+2. **Detect Language**: Click the "Send" button to detect the language of the input text.
+3. **Translate**: Select the target language from the dropdown and click "Translate" to get the translated text.
+4. **Summarize**: If the output text is lengthy, you can choose the summarization options and click "Summarize" to get a concise version.
+
+## Components
+
+- **TextProcessor**: The main component that handles user input, output display, and integrates language detection, translation, and summarization functionalities.
+- **InputSection**: A component for user input, including a textarea and a send button.
+- **OutputSection**: Displays the processed output, detected language, and translated text.
+- **SummaryControls**: Provides options for summarization type, format, and length.
+- **TranslationControls**: Allows users to select the target language for translation.
+
+## Hooks
+
+- **useLanguageDetection**: Custom hook for detecting the language of the input text.
+- **useTranslation**: Custom hook for handling text translation.
+- **useSummarization**: Custom hook for summarizing the output text.
+
+## Styling
+
+The application uses Tailwind CSS for styling, with additional custom styles defined in `globals.css`. The design is responsive and adapts to different screen sizes.
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request.
+
+1. Fork the repository.
+2. Create a new branch for your feature:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add some feature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Thanks to the developers of the libraries and frameworks used in this project.
+- Special thanks to the open-source community for their contributions.
