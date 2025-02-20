@@ -7,13 +7,6 @@ export const useTranslation = () => {
   const [translatedText, setTranslatedText] = useState("");
 
   const translate = async (text, sourceLang, targetLang) => {
-    if (sourceLang === targetLang) {
-      toast.error(
-        "Language pair are the same. You can only translate between different languages."
-      );
-      return;
-    }
-
     setIsTranslating(true);
     try {
       if (!("ai" in self && "translator" in self.ai)) {
@@ -23,6 +16,13 @@ export const useTranslation = () => {
       const translatorCapabilities = await self.ai.translator.capabilities();
       const sourceCode = REVERSE_LANGUAGE_MAP[sourceLang];
       const targetCode = targetLang;
+
+      if (sourceCode === targetCode) {
+        toast.info(
+          "Language pair are the same. You can only translate between different languages."
+        );
+        return;
+      }
 
       const isAvailable = translatorCapabilities.languagePairAvailable(
         sourceCode,
@@ -57,5 +57,5 @@ export const useTranslation = () => {
     }
   };
 
-  return { isTranslating, translatedText, translate };
+  return { isTranslating, translatedText, translate, setTranslatedText };
 };
