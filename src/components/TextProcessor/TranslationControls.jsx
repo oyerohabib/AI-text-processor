@@ -20,7 +20,7 @@ export const TranslationControls = ({
     </select>
     <button
       onClick={onTranslate}
-      className="bg-gray-700 text-white rounded px-4 py-2 hover:bg-gray-900 transition"
+      className="bg-gray-700 text-white rounded px-4 py-2 hover:bg-gray-900 transition cursor-pointer"
       disabled={isTranslating}
     >
       {isTranslating ? "Translating..." : "Translate"}
