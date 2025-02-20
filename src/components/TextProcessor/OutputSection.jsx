@@ -8,7 +8,7 @@ export const OutputSection = ({
 }) => (
   <div className="flex-1 border border-gray-300 rounded-md p-4 mb-4 bg-gray-50 overflow-y-auto">
     <div className="mb-4">
-      <p className="text-gray-800 text-lg font-semibold">
+      <p className="text-gray-800 text-lg">
         <FaRegFileAlt className="inline mr-2" />
         {outputText}
       </p>
@@ -18,8 +18,6 @@ export const OutputSection = ({
       </p>
     </div>
     {children}
-    {translatedText && (
-      <p className="mt-4 font-bold text-gray-800">{translatedText}</p>
-    )}
+    {translatedText && <p className="mt-4 text-gray-800">{translatedText}</p>}
   </div>
 );
