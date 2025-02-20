@@ -3,10 +3,13 @@ import { toast } from "react-toastify";
 import { LANGUAGE_MAP } from "../constants/languageOptions";
 
 export const useLanguageDetection = () => {
-  const [detectedLanguage, setDetectedLanguage] = useState("");
+  const [detectedLanguage, setDetectedLanguage] = useState("N/A");
 
   const detectLanguage = async (text) => {
-    if (!text) return;
+    if (!text) {
+      setDetectedLanguage("N/A"); // Reset to N/A if no text
+      return;
+    }
 
     try {
       if (!("ai" in self && "languageDetector" in self.ai)) {
@@ -36,6 +39,7 @@ export const useLanguageDetection = () => {
       return detectedLangFull;
     } catch (error) {
       toast.error("Error detecting language: " + error.message);
+      setDetectedLanguage("N/A"); // Reset to N/A on error
       return null;
     }
   };
